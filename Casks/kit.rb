@@ -7,6 +7,11 @@ cask "kit" do
   desc "An open-source kit to optimize your developer workflow"
   homepage "https://www.scriptkit.com"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :mojave"
 
   app "Kit.app"
